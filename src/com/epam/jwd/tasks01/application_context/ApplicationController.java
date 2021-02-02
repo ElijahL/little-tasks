@@ -1,11 +1,7 @@
 package com.epam.jwd.tasks01.application_context;
 
-import com.epam.jwd.tasks01.task.Task;
-import com.epam.jwd.tasks01.task.impl.*;
-
 import java.text.MessageFormat;
 import java.util.Calendar;
-import java.util.List;
 
 public class ApplicationController {
     public static void start() {
@@ -57,18 +53,5 @@ public class ApplicationController {
             return "Dot No." + result + " is closer to zero.";
         }
         return "They are at the same distance.";
-    }
-
-    private static List<Task> initTasks() {
-        return List.of(new FirstTask().init(5),
-                new SecondTask().init(5, 1997),
-                new ThirdTask().init(1.6),
-                new FourthTask().init(1, 2, 3, 4),
-                new FifthTask().init(6),
-                new SixthTask().init(1678),
-                new SeventhTask().init(1, 2, 2, 1),
-                new EightsTask().init(2.99),
-                new NinthTask().init(5),
-                new TenthTask().init(.0, 1.0, 0.1));
     }
 }
